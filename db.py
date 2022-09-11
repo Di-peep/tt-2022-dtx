@@ -1,6 +1,8 @@
 from mysql.connector import connect, Error
 
 
+# host = <name-of-container>  for run with docker
+
 def create_db():
     try:
         with connect(
@@ -34,7 +36,7 @@ def create_table():
                 image VARCHAR(128),
                 title VARCHAR(64),
                 date VARCHAR(10),
-                location VARCHAR(16),
+                location VARCHAR(24),
                 beds VARCHAR(16),
                 description TEXT,
                 price FLOAT,
